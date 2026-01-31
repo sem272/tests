@@ -6,9 +6,4 @@ export class BasePage {
     async open(url) {
         await this.page.goto(url)
     }
-
-    async close() {
-        await this.page.closed(true)
-    }
-
 }
