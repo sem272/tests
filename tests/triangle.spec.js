@@ -17,11 +17,11 @@ test.describe.serial('Triangle validator', () => {
 
     // await page.pause()
     await trianglePage.fillSides(3, 4, 5)
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await trianglePage.submit()
 
     const result = page.locator('.info.logg', { hasText: 'Прямоугольный треугольник' })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await expect(result).toBeVisible()
   })
 
@@ -29,11 +29,11 @@ test.describe.serial('Triangle validator', () => {
     const trianglePage = new TrianglePage(page)
 
     await trianglePage.fillSides(5, 7, 10)
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await trianglePage.submit()
 
     const result = page.locator('.info.logg', { hasText: 'Тупоугольный треугольник' })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await expect(result).toBeVisible()
   })
 
@@ -41,11 +41,11 @@ test.describe.serial('Triangle validator', () => {
     const trianglePage = new TrianglePage(page)
 
     await trianglePage.fillSides(4, 5, 6)
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await trianglePage.submit()
 
     const result = page.locator('.info.logg', { hasText: 'Остроугольный треугольник' })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await expect(result).toBeVisible()
   })
 
@@ -53,11 +53,11 @@ test.describe.serial('Triangle validator', () => {
     const trianglePage = new TrianglePage(page)
 
     await trianglePage.fillSides(5, 5, 6)
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await trianglePage.submit()
 
     const result = page.locator('.info.logg', { hasText: 'Равнобедренный треугольник' })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await expect(result).toBeVisible()
   })
 
@@ -65,11 +65,11 @@ test.describe.serial('Triangle validator', () => {
     const trianglePage = new TrianglePage(page)
 
     await trianglePage.fillSides(5, 5, 5)
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await trianglePage.submit()
 
     const result = page.locator('.info.logg', { hasText: 'Равносторонний треугольник' })
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await expect(result).toBeVisible()
   })
 })
