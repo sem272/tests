@@ -1,1 +1,3 @@
-npm install - для запуска тестов
+npm install 
+npm test
+- для запуска тестов
